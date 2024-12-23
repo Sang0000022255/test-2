@@ -15,8 +15,10 @@
       <h1 class="logo">MyWebsite</h1>
       <nav>
         <ul class="nav-links">
+          <li><a href="#hero">Trang Chủ</a></li>
           <li><a href="#about">Giới Thiệu</a></li>
           <li><a href="#services">Dịch Vụ</a></li>
+          <li><a href="#team">Đội Ngũ</a></li>
           <li><a href="#contact">Liên Hệ</a></li>
         </ul>
       </nav>
@@ -24,10 +26,10 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <div class="hero-content">
-      <h2>Khám Phá Tương Lai Với Chúng Tôi</h2>
-      <p>Chúng tôi mang đến giải pháp tối ưu để bạn phát triển bền vững.</p>
+      <h2>Khám Phá Sáng Tạo Cùng Chúng Tôi</h2>
+      <p>Đồng hành cùng bạn trên con đường phát triển vượt trội.</p>
       <a href="#about" class="btn-primary">Tìm Hiểu Thêm</a>
     </div>
   </section>
@@ -36,7 +38,8 @@
   <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">Giới Thiệu</h2>
-      <p class="section-text">Chúng tôi là đội ngũ sáng tạo và chuyên nghiệp, mang đến các giải pháp đột phá cho khách hàng.</p>
+      <p class="section-text">Chúng tôi là đội ngũ chuyên nghiệp với sứ mệnh tạo ra giá trị bền vững cho khách hàng qua các giải pháp sáng tạo.</p>
+      <img src="about-image.jpg" alt="Giới thiệu" class="about-image">
     </div>
   </section>
 
@@ -48,17 +51,71 @@
         <div class="card">
           <i class="fas fa-code"></i>
           <h3>Phát Triển Web</h3>
-          <p>Chúng tôi cung cấp dịch vụ phát triển website chuyên nghiệp.</p>
+          <p>Chúng tôi xây dựng website hiện đại, thân thiện với người dùng.</p>
         </div>
         <div class="card">
           <i class="fas fa-paint-brush"></i>
           <h3>Thiết Kế UI/UX</h3>
-          <p>Tối ưu trải nghiệm người dùng với thiết kế đẹp và thân thiện.</p>
+          <p>Thiết kế giao diện người dùng đẹp mắt và tối ưu trải nghiệm.</p>
         </div>
         <div class="card">
           <i class="fas fa-chart-line"></i>
           <h3>Chiến Lược Kinh Doanh</h3>
-          <p>Đưa ra các chiến lược hiệu quả để thúc đẩy doanh nghiệp của bạn.</p>
+          <p>Đưa ra các chiến lược phát triển hiệu quả và lâu dài.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Ứng Dụng Di Động</h3>
+          <p>Phát triển ứng dụng tương thích đa nền tảng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-title">Ưu Điểm Nổi Bật</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <h3 class="feature-number" data-target="1000">0</h3>
+          <p>Khách Hàng Hài Lòng</p>
+        </div>
+        <div class="feature">
+          <h3 class="feature-number" data-target="500">0</h3>
+          <p>Dự Án Hoàn Thành</p>
+        </div>
+        <div class="feature">
+          <h3 class="feature-number" data-target="200">0</h3>
+          <p>Nhân Viên Chuyên Nghiệp</p>
+        </div>
+        <div class="feature">
+          <h3 class="feature-number" data-target="10">0</h3>
+          <p>Năm Kinh Nghiệm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Đội Ngũ</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="team1.jpg" alt="Thành Viên" class="team-image">
+          <h3>Nguyễn Văn A</h3>
+          <p>Chuyên Gia Phát Triển</p>
+        </div>
+        <div class="team-member">
+          <img src="team2.jpg" alt="Thành Viên" class="team-image">
+          <h3>Trần Thị B</h3>
+          <p>Nhà Thiết Kế</p>
+        </div>
+        <div class="team-member">
+          <img src="team3.jpg" alt="Thành Viên" class="team-image">
+          <h3>Lê Văn C</h3>
+          <p>Chuyên Gia Chiến Lược</p>
         </div>
       </div>
     </div>
@@ -68,7 +125,6 @@
   <section id="contact" class="section">
     <div class="container">
       <h2 class="section-title">Liên Hệ</h2>
-      <p>Đừng ngần ngại liên hệ với chúng tôi qua thông tin bên dưới.</p>
       <form class="contact-form">
         <input type="text" placeholder="Họ và Tên" required>
         <input type="email" placeholder="Email" required>
