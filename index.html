@@ -1,144 +1,106 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang Web Chuyên Nghiệp</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân - Sinh viên CNTT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .navbar a:hover {
+            background: #555;
+        }
+        section {
+            padding: 100px 20px;
+            margin-top: 70px;
+        }
+        section:nth-child(even) {
+            background: #f4f4f4;
+        }
+        section h2 {
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">MyWebsite</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#hero">Trang Chủ</a></li>
-          <li><a href="#about">Giới Thiệu</a></li>
-          <li><a href="#services">Dịch Vụ</a></li>
-          <li><a href="#team">Đội Ngũ</a></li>
-          <li><a href="#contact">Liên Hệ</a></li>
+    <header>
+        <nav class="navbar">
+            <a href="#gioi-thieu">Giới thiệu</a>
+            <a href="#ky-nang">Kỹ năng</a>
+            <a href="#du-an">Dự án</a>
+            <a href="#lien-he">Liên hệ</a>
+        </nav>
+    </header>
+
+    <section id="gioi-thieu">
+        <h2>Giới thiệu</h2>
+        <p>Xin chào! Tôi là [Tên của bạn], sinh viên ngành Công Nghệ Thông Tin tại [Trường Đại học của bạn]. Tôi đam mê lập trình, công nghệ và luôn tìm kiếm cơ hội để nâng cao kỹ năng của mình trong lĩnh vực này.</p>
+    </section>
+
+    <section id="ky-nang">
+        <h2>Kỹ năng</h2>
+        <ul>
+            <li>Ngôn ngữ lập trình: C++, Java, Python</li>
+            <li>Phát triển web: HTML, CSS, JavaScript, React</li>
+            <li>Quản trị cơ sở dữ liệu: MySQL, MongoDB</li>
+            <li>Kiến thức về AI/ML cơ bản</li>
+            <li>Kỹ năng giải quyết vấn đề và tư duy logic</li>
         </ul>
-      </nav>
-    </div>
-  </header>
+    </section>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="hero-content">
-      <h2>Khám Phá Sáng Tạo Cùng Chúng Tôi</h2>
-      <p>Đồng hành cùng bạn trên con đường phát triển vượt trội.</p>
-      <a href="#about" class="btn-primary">Tìm Hiểu Thêm</a>
-    </div>
-  </section>
+    <section id="du-an">
+        <h2>Dự án</h2>
+        <p>Tôi đã thực hiện một số dự án trong quá trình học tập, bao gồm:</p>
+        <ul>
+            <li><strong>Website quản lý thư viện:</strong> Một hệ thống quản lý sách và người dùng, xây dựng bằng PHP và MySQL.</li>
+            <li><strong>Ứng dụng đặt vé xem phim:</strong> Ứng dụng di động với React Native, tích hợp tính năng đặt vé và thanh toán trực tuyến.</li>
+            <li><strong>Mô hình dự đoán giá nhà:</strong> Sử dụng Python và các thư viện Machine Learning như scikit-learn để phân tích dữ liệu và dự đoán giá nhà.</li>
+        </ul>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">Giới Thiệu</h2>
-      <p class="section-text">Chúng tôi là đội ngũ chuyên nghiệp với sứ mệnh tạo ra giá trị bền vững cho khách hàng qua các giải pháp sáng tạo.</p>
-      <img src="about-image.jpg" alt="Giới thiệu" class="about-image">
-    </div>
-  </section>
+    <section id="lien-he">
+        <h2>Liên hệ</h2>
+        <p>Hãy liên hệ với tôi qua các kênh sau:</p>
+        <ul>
+            <li>Email: <a href="mailto:emailcuaban@example.com">emailcuaban@example.com</a></li>
+            <li>Điện thoại: 0123 456 789</li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></li>
+            <li>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></li>
+        </ul>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services" class="section bg-light">
-    <div class="container">
-      <h2 class="section-title">Dịch Vụ</h2>
-      <div class="card-grid">
-        <div class="card">
-          <i class="fas fa-code"></i>
-          <h3>Phát Triển Web</h3>
-          <p>Chúng tôi xây dựng website hiện đại, thân thiện với người dùng.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-paint-brush"></i>
-          <h3>Thiết Kế UI/UX</h3>
-          <p>Thiết kế giao diện người dùng đẹp mắt và tối ưu trải nghiệm.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Chiến Lược Kinh Doanh</h3>
-          <p>Đưa ra các chiến lược phát triển hiệu quả và lâu dài.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-mobile-alt"></i>
-          <h3>Ứng Dụng Di Động</h3>
-          <p>Phát triển ứng dụng tương thích đa nền tảng.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features" class="section">
-    <div class="container">
-      <h2 class="section-title">Ưu Điểm Nổi Bật</h2>
-      <div class="features-grid">
-        <div class="feature">
-          <h3 class="feature-number" data-target="1000">0</h3>
-          <p>Khách Hàng Hài Lòng</p>
-        </div>
-        <div class="feature">
-          <h3 class="feature-number" data-target="500">0</h3>
-          <p>Dự Án Hoàn Thành</p>
-        </div>
-        <div class="feature">
-          <h3 class="feature-number" data-target="200">0</h3>
-          <p>Nhân Viên Chuyên Nghiệp</p>
-        </div>
-        <div class="feature">
-          <h3 class="feature-number" data-target="10">0</h3>
-          <p>Năm Kinh Nghiệm</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team Section -->
-  <section id="team" class="section bg-light">
-    <div class="container">
-      <h2 class="section-title">Đội Ngũ</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <img src="team1.jpg" alt="Thành Viên" class="team-image">
-          <h3>Nguyễn Văn A</h3>
-          <p>Chuyên Gia Phát Triển</p>
-        </div>
-        <div class="team-member">
-          <img src="team2.jpg" alt="Thành Viên" class="team-image">
-          <h3>Trần Thị B</h3>
-          <p>Nhà Thiết Kế</p>
-        </div>
-        <div class="team-member">
-          <img src="team3.jpg" alt="Thành Viên" class="team-image">
-          <h3>Lê Văn C</h3>
-          <p>Chuyên Gia Chiến Lược</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Liên Hệ</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Họ và Tên" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Nội dung" required></textarea>
-        <button type="submit" class="btn-primary">Gửi</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 MyWebsite. All rights reserved.</p>
-    </div>
-  </footer>
+    <footer>
+        <p>&copy; 2024 [Tên của bạn] - Sinh viên Công Nghệ Thông Tin. All rights reserved.</p>
+    </footer>
 </body>
 </html>
