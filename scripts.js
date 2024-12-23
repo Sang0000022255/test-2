@@ -1,15 +1,22 @@
-// Khi cuộn đến phần tử, áp dụng class 'active'
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll(".section");
+  const counters = document.querySelectorAll('.feature-number');
+  
+  counters.forEach(counter => {
+    counter.innerText = '0';
 
-  const handleScroll = () => {
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        section.classList.add("active");
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / 200;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCounter, 10);
+      } else {
+        counter.innerText = target;
       }
-    });
-  };
+    };
 
-  window.addEventListener("scroll", handleScroll);
+    updateCounter();
+  });
 });
