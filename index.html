@@ -3,133 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu bản thân - Sinh viên CNTT</title>
+    <title>Giới thiệu Sinh viên Ngành Công nghệ Thông tin</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
-            animation: fadeIn 1.5s;
+            color: #333;
+            overflow-x: hidden;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
+        /* Background video */
         header {
-            background: linear-gradient(90deg, #0066ff, #00ccff);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.2);
-            transition: all 0.3s;
-        }
-
-        .navbar a:hover {
-            background: white;
-            color: #0066ff;
-        }
-
-        section {
-            padding: 100px 20px;
-            margin-top: 70px;
-            animation: slideIn 1s;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        section:nth-child(even) {
-            background: #f0f9ff;
-        }
-
-        section h2 {
-            margin-bottom: 20px;
-            color: #0066ff;
-        }
-
-        footer {
-            background: #0066ff;
+            position: relative;
+            height: 100vh;
+            background: url('https://via.placeholder.com/1500x1000') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 10px;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-attachment: fixed;
         }
 
-        footer p {
+        header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
             margin: 0;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        /* Parallax scrolling effect */
+        .parallax {
+            background-image: url('https://via.placeholder.com/1500x600');
+            min-height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .section {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #0044cc;
+            font-weight: bold;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* Profile */
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .profile img:hover {
+            transform: scale(1.1);
+        }
+
+        .profile .text {
+            max-width: 600px;
+        }
+
+        /* Skills Cards */
+        .skills ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skills li {
+            background: #eef2f7;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transform: scale(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skills li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0044cc;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Header with Background Video -->
     <header>
-        <nav class="navbar">
-            <a href="#gioi-thieu">Giới thiệu</a>
-            <a href="#ky-nang">Kỹ năng</a>
-            <a href="#du-an">Dự án</a>
-            <a href="#lien-he">Liên hệ</a>
-        </nav>
+        <h1>Giới thiệu Sinh viên Ngành Công nghệ Thông tin</h1>
+        <p>Khám phá hành trình học tập và phát triển kỹ năng trong ngành CNTT</p>
     </header>
 
-    <section id="gioi-thieu">
-        <h2>Giới thiệu</h2>
-        <p>Xin chào! Tôi là [Tên của bạn], sinh viên ngành Công Nghệ Thông Tin tại [Trường Đại học của bạn]. Tôi đam mê lập trình, công nghệ và luôn tìm kiếm cơ hội để nâng cao kỹ năng của mình trong lĩnh vực này.</p>
-    </section>
+    <!-- Parallax Section -->
+    <div class="parallax"></div>
 
-    <section id="ky-nang">
-        <h2>Kỹ năng</h2>
-        <ul>
-            <li>Ngôn ngữ lập trình: C++, Java, Python</li>
-            <li>Phát triển web: HTML, CSS, JavaScript, React</li>
-            <li>Quản trị cơ sở dữ liệu: MySQL, MongoDB</li>
-            <li>Kiến thức về AI/ML cơ bản</li>
-            <li>Kỹ năng giải quyết vấn đề và tư duy logic</li>
-        </ul>
-    </section>
+    <div class="container">
+        <!-- Profile Section -->
+        <section class="section profile">
+            <img src="https://via.placeholder.com/200" alt="Ảnh đại diện">
+            <div class="text">
+                <h2>Nguyễn Văn A</h2>
+                <p><strong>Ngành học:</strong> Công nghệ Thông tin</p>
+                <p><strong>Trường:</strong> Đại học Công nghệ Hồ Chí Minh (UTEC)</p>
+                <p><strong>Giới thiệu:</strong> Tôi là sinh viên năm thứ 3 ngành Công nghệ Thông tin, đam mê lập trình và phát triển phần mềm. Mục tiêu của tôi là trở thành một lập trình viên giỏi và đóng góp vào các dự án công nghệ lớn.</p>
+            </div>
+        </section>
 
-    <section id="du-an">
-        <h2>Dự án</h2>
-        <p>Tôi đã thực hiện một số dự án trong quá trình học tập, bao gồm:</p>
-        <ul>
-            <li><strong>Website quản lý thư viện:</strong> Một hệ thống quản lý sách và người dùng, xây dựng bằng PHP và MySQL.</li>
-            <li><strong>Ứng dụng đặt vé xem phim:</strong> Ứng dụng di động với React Native, tích hợp tính năng đặt vé và thanh toán trực tuyến.</li>
-            <li><strong>Mô hình dự đoán giá nhà:</strong> Sử dụng Python và các thư viện Machine Learning như scikit-learn để phân tích dữ liệu và dự đoán giá nhà.</li>
-        </ul>
-    </section>
+        <!-- Education Section -->
+        <section class="section">
+            <h2>Học vấn</h2>
+            <p>Hiện tôi đang theo học tại Đại học Công nghệ Hồ Chí Minh (UTEC), chuyên ngành Công nghệ Thông tin. Dự kiến tốt nghiệp vào năm 2026.</p>
+        </section>
 
-    <section id="lien-he">
-        <h2>Liên hệ</h2>
-        <p>Hãy liên hệ với tôi qua các kênh sau:</p>
-        <ul>
-            <li>Email: <a href="mailto:emailcuaban@example.com">emailcuaban@example.com</a></li>
-            <li>Điện thoại: 0123 456 789</li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></li>
-            <li>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></li>
-        </ul>
-    </section>
+        <!-- Skills Section -->
+        <section class="section skills">
+            <h2>Kỹ năng</h2>
+            <ul>
+                <li>Phát triển ứng dụng Web (HTML, CSS, JavaScript, React)</li>
+                <li>Lập trình Python, Java, C++</li>
+                <li>Quản trị cơ sở dữ liệu (MySQL, MongoDB)</li>
+                <li>Sử dụng Git và GitHub trong quản lý mã nguồn</li>
+                <li>Phát triển ứng dụng di động (Android, React Native)</li>
+            </ul>
+        </section>
 
+        <!-- Projects Section -->
+        <section class="section">
+            <h2>Dự án</h2>
+            <p>Trong quá trình học, tôi đã tham gia vào nhiều dự án lập trình, bao gồm:</p>
+            <ul>
+                <li><strong>Ứng dụng quản lý học sinh:</strong> Xây dựng một ứng dụng quản lý thông tin học sinh sử dụng Java và MySQL.</li>
+                <li><strong>Trang web bán hàng trực tuyến:</strong> Phát triển một trang web bán hàng với HTML, CSS, JavaScript và React.</li>
+                <li><strong>Ứng dụng di động cho sinh viên:</strong> Xây dựng ứng dụng giúp sinh viên tra cứu lịch học và điểm số trên Android.</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 [Tên của bạn] - Sinh viên Công Nghệ Thông Tin. All rights reserved.</p>
+        <p>&copy; 2024 Nguyễn Văn A - Sinh viên ngành Công nghệ Thông tin</p>
     </footer>
+
 </body>
 </html>
